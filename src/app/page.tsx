@@ -1,103 +1,143 @@
+﻿import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
+import { getTranslations } from "next-intl/server";
+import { PageTransition } from "@/components/PageTransition";
+import { ProjectCard } from "@/components/ProjectCard";
+import { SkillBadges } from "@/components/SkillBadges";
+import { Timeline } from "@/components/Timeline";
+import { getProjects, getSiteSettings, getSkills, getTimelineExcerpt } from "@/lib/data";
+import { OG_IMAGE } from "@/lib/site";
 
-export default function Home() {
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("meta");
+  const site = getSiteSettings();
+  const og = site.ogImage || OG_IMAGE;
+  return {
+    title: {
+      absolute: `${t("homeTitle")} · ${t("siteName")}`,
+    },
+    description: t("homeDescription"),
+    openGraph: {
+      title: t("defaultTitle"),
+      description: t("homeDescription"),
+      images: [{ url: og }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("defaultTitle"),
+      description: t("homeDescription"),
+      images: [og],
+    },
+  };
+}
+
+export default async function HomePage() {
+  const t = await getTranslations();
+  const projects = getProjects();
+  const excerpt = getTimelineExcerpt(3);
+  const site = getSiteSettings();
+  const skills = getSkills();
+
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <PageTransition>
+      <section className="relative overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(59,130,246,0.14),_transparent_55%)]" />
+        <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 md:grid-cols-[1.1fr_0.9fr] md:px-6 md:py-24">
+          <div>
+            <p className="mb-3 text-sm uppercase tracking-[0.18em] text-[var(--color-accent)]">
+              {t("hero.location")}
+            </p>
+            <h1 className="text-4xl leading-tight text-[var(--color-primary)] md:text-6xl">
+              {t("hero.title")}
+            </h1>
+            <p className="mt-2 font-[family-name:var(--font-display)] text-xl text-[var(--color-accent)] md:text-2xl">
+              {t("hero.subtitle")}
+            </p>
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-[var(--color-muted)] md:text-lg">
+              {t("hero.hook")}
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href="#projects"
+                className="inline-flex items-center rounded-md bg-[var(--color-primary)] px-5 py-2.5 text-sm font-medium text-white transition hover:bg-[var(--color-accent)]"
+              >
+                {t("hero.ctaProjects")}
+              </a>
+              <a
+                href={site.cvPath}
+                download
+                className="inline-flex items-center rounded-md border border-[var(--color-border)] bg-[var(--color-card)] px-5 py-2.5 text-sm font-medium text-[var(--color-primary)] shadow-sm transition hover:border-[var(--color-accent)]"
+              >
+                {t("hero.ctaCv")}
+              </a>
+            </div>
+          </div>
+          <div className="relative mx-auto aspect-square w-56 md:w-72">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src={site.headshot}
+              alt={t("hero.title")}
+              fill
+              priority
+              className="rounded-full object-cover"
+              sizes="288px"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-14 md:px-6">
+        <h2 className="text-3xl text-[var(--color-primary)]">{t("skills.title")}</h2>
+        <p className="mt-2 max-w-2xl text-[var(--color-muted)]">{t("skills.subtitle")}</p>
+        <div className="mt-8">
+          <SkillBadges skills={skills} />
+        </div>
+      </section>
+
+      <section id="projects" className="mx-auto max-w-6xl px-4 py-14 md:px-6">
+        <h2 className="text-3xl text-[var(--color-primary)]">{t("projects.title")}</h2>
+        <p className="mt-2 max-w-2xl text-[var(--color-muted)]">
+          {t("projects.subtitle")}
+        </p>
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-14 md:px-6">
+        <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <h2 className="text-3xl text-[var(--color-primary)]">{t("timeline.title")}</h2>
+            <p className="mt-2 max-w-2xl text-[var(--color-muted)]">
+              {t("timeline.subtitle")}
+            </p>
+          </div>
+          <Link
+            href="/cv"
+            className="text-sm font-medium text-[var(--color-accent)] hover:underline"
+          >
+            {t("timeline.seeAll")}
+          </Link>
+        </div>
+        <Timeline items={excerpt} />
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-16 md:px-6">
+        <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-card)]/80 px-6 py-12 text-center shadow-[0_16px_40px_-24px_rgba(15,23,42,0.25)] md:px-12">
+          <h2 className="text-3xl text-[var(--color-primary)]">{t("cta.title")}</h2>
+          <p className="mx-auto mt-3 max-w-xl text-[var(--color-muted)]">
+            {t("cta.subtitle")}
+          </p>
+          <Link
+            href="/contact"
+            className="mt-8 inline-flex items-center rounded-md bg-[var(--color-primary)] px-6 py-3 text-sm font-medium text-white transition hover:bg-[var(--color-accent)]"
+          >
+            {t("cta.button")}
+          </Link>
+        </div>
+      </section>
+    </PageTransition>
   );
 }

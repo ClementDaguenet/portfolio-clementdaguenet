@@ -1,26 +1,60 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+[data-theme="pro"] {
+  --pro-bg: #f8fafc;
+  --pro-card: #ffffff;
+  --pro-primary: #1e3a5f;
+  --pro-accent: #3b82f6;
+  --pro-text: #0f172a;
+  --pro-border: #e2e8f0;
+  --pro-muted: #64748b;
+
+  --color-bg: var(--pro-bg);
+  --color-card: var(--pro-card);
+  --color-primary: var(--pro-primary);
+  --color-accent: var(--pro-accent);
+  --color-text: var(--pro-text);
+  --color-border: var(--pro-border);
+  --color-muted: var(--pro-muted);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg: #f8fafc;
+  --color-card: #ffffff;
+  --color-primary: #1e3a5f;
+  --color-accent: #3b82f6;
+  --color-text: #0f172a;
+  --color-border: #e2e8f0;
+  --color-muted: #64748b;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(59, 130, 246, 0.12), transparent 55%),
+    radial-gradient(900px 500px at 100% 0%, rgba(30, 58, 95, 0.08), transparent 50%),
+    linear-gradient(180deg, #f8fafc 0%, #eef2f7 45%, #f8fafc 100%);
+  background-attachment: fixed;
+  color: var(--color-text);
+  font-family: var(--font-body), "Source Serif 4", Georgia, serif;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), "Playfair Display", Georgia, serif;
+  letter-spacing: -0.02em;
+}
+
+::selection {
+  background: rgba(59, 130, 246, 0.25);
+}
+
+a {
+  text-underline-offset: 3px;
 }

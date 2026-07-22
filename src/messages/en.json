@@ -1,0 +1,121 @@
+﻿{
+  "meta": {
+    "siteName": "Clément Daguenet",
+    "defaultTitle": "Clément Daguenet - Full-Stack Developer",
+    "defaultDescription": "Portfolio of Clément Daguenet, Full-Stack developer based between Le Mans and Angers. Projects, career path and contact.",
+    "homeTitle": "Home",
+    "homeDescription": "Full-Stack developer in a Master's program at MyDigitalSchool Angers, apprenticing at Microtec. Explore projects and career path.",
+    "cvTitle": "CV & Career",
+    "cvDescription": "Career path and education of Clément Daguenet, Full-Stack developer.",
+    "contactTitle": "Contact",
+    "contactDescription": "Get in touch with Clément Daguenet for a permanent role, a project or a collaboration.",
+    "legalTitle": "Legal notice",
+    "legalDescription": "Legal notice for clement-daguenet.fr."
+  },
+  "nav": {
+    "home": "Home",
+    "cv": "CV",
+    "contact": "Contact",
+    "brand": "Clément Daguenet"
+  },
+  "hero": {
+    "title": "Clément Daguenet",
+    "subtitle": "Full-Stack Developer",
+    "hook": "Master's student at MyDigitalSchool Angers and apprentice developer at Microtec in Le Mans, I build modern, reliable and polished web applications. Based between Le Mans and Angers, I am looking for a permanent role at the end of my Master's for october 2026.",
+    "ctaProjects": "View projects",
+    "ctaCv": "Download CV",
+    "location": "Le Mans / Angers · Seeking permanent role · End of Master's"
+  },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "A versatile toolkit to build, ship and maintain applications."
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "A selection of web work, tools and games.",
+    "viewProject": "View project",
+    "private": "Private project",
+    "featured": "Featured"
+  },
+  "timeline": {
+    "title": "Career path",
+    "subtitle": "Education, experience and projects - newest first.",
+    "seeAll": "View full timeline",
+    "types": {
+      "work": "Work",
+      "education": "Education",
+      "project": "Project",
+      "life": "Journey"
+    }
+  },
+  "cta": {
+    "title": "Let's work together",
+    "subtitle": "A permanent role, a web project or a question? Let's talk.",
+    "button": "Contact me"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Send a message - reply within a few business days.",
+    "name": "Name",
+    "email": "Email",
+    "requestType": "Request type",
+    "requestTypePlaceholder": "Choose…",
+    "requestTypes": {
+      "job": "Job offer / permanent role",
+      "freelance": "Freelance / project",
+      "collaboration": "Collaboration",
+      "other": "Other"
+    },
+    "subject": "Subject",
+    "message": "Message",
+    "submit": "Send",
+    "sending": "Sending…",
+    "success": "Message sent. Thank you!",
+    "error": "Something went wrong. Please try again or email contact@clement-daguenet.fr.",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "you@example.com",
+    "subjectPlaceholder": "Subject of your message",
+    "messagePlaceholder": "Your message…"
+  },
+  "cv": {
+    "title": "CV & Career",
+    "subtitle": "The essentials of my path, newest first.",
+    "download": "Download PDF",
+    "floatingLabel": "CV PDF"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "legal": "Legal notice",
+    "mirror": "Gaming portfolio · WoXayZ",
+    "builtWith": "Next.js · TypeScript · Tailwind"
+  },
+  "mirror": {
+    "label": "Switch to gaming portfolio",
+    "pro": "PRO",
+    "gaming": "GAMING",
+    "switching": "Switching…"
+  },
+  "language": {
+    "label": "Language",
+    "fr": "FR",
+    "en": "EN"
+  },
+  "notFound": {
+    "prompt": "clement-daguenet.fr - bash",
+    "line1": "404 - Page not found",
+    "line2": "The requested page does not exist or has been moved.",
+    "line3": "Type `cd /` to return home.",
+    "home": "Back to home"
+  },
+  "legal": {
+    "title": "Legal notice",
+    "editorTitle": "Publisher",
+    "editorBody": "This site is published by Clément Daguenet, as an individual.\nContact: contact@clement-daguenet.fr",
+    "hostTitle": "Host",
+    "hostBody": "OVH SAS - 2 rue Kellermann, 59100 Roubaix, France.\nWebsite: https://www.ovhcloud.com",
+    "ipTitle": "Intellectual property",
+    "ipBody": "All content (text, visuals, code) on this site belongs to Clément Daguenet unless otherwise stated. Unauthorized reproduction is prohibited.",
+    "dataTitle": "Personal data",
+    "dataBody": "Information sent through the contact form is used solely to answer your request. No data is shared with third parties."
+  }
+}

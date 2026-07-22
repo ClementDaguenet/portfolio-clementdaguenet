@@ -1,0 +1,121 @@
+﻿{
+  "meta": {
+    "siteName": "Clément Daguenet",
+    "defaultTitle": "Clément Daguenet - Développeur Full-Stack",
+    "defaultDescription": "Portfolio de Clément Daguenet, développeur Full-Stack basé entre Le Mans et Angers. Projets web, parcours et contact.",
+    "homeTitle": "Accueil",
+    "homeDescription": "Développeur Full-Stack en Master à MyDigitalSchool Angers, en alternance chez Microtec. Découvrez mes projets et mon parcours.",
+    "cvTitle": "CV & Parcours",
+    "cvDescription": "Parcours professionnel et formation de Clément Daguenet, développeur Full-Stack.",
+    "contactTitle": "Contact",
+    "contactDescription": "Contactez Clément Daguenet pour une opportunité CDI, un projet ou une collaboration.",
+    "legalTitle": "Mentions légales",
+    "legalDescription": "Mentions légales du site clement-daguenet.fr."
+  },
+  "nav": {
+    "home": "Accueil",
+    "cv": "CV",
+    "contact": "Contact",
+    "brand": "Clément Daguenet"
+  },
+  "hero": {
+    "title": "Clément Daguenet",
+    "subtitle": "Développeur Full-Stack",
+    "hook": "Étudiant en Master à MyDigitalSchool Angers et développeur en alternance chez Microtec au Mans, je conçois des logiciels et des applications web modernes, fiables et soigné(e)s. Basé entre Le Mans et Angers, je recherche un CDI à la fin de mon Master pour octobre 2026.",
+    "ctaProjects": "Voir les projets",
+    "ctaCv": "Télécharger le CV",
+    "location": "Le Mans / Angers · Recherche CDI · Fin de Master"
+  },
+  "skills": {
+    "title": "Compétences",
+    "subtitle": "Un socle polyvalent pour construire, déployer et maintenir des applications."
+  },
+  "projects": {
+    "title": "Projets",
+    "subtitle": "Sélection de réalisations web, outils et jeux.",
+    "viewProject": "Voir le projet",
+    "private": "Projet privé",
+    "featured": "Mis en avant"
+  },
+  "timeline": {
+    "title": "Parcours",
+    "subtitle": "Formation, expériences et projets - du plus récent au plus ancien.",
+    "seeAll": "Voir le parcours complet",
+    "types": {
+      "work": "Expérience",
+      "education": "Formation",
+      "project": "Projet",
+      "life": "Parcours"
+    }
+  },
+  "cta": {
+    "title": "Travaillons ensemble",
+    "subtitle": "Une opportunité CDI, un projet web ou une question ? Écrivons-nous.",
+    "button": "Me contacter"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Envoyez un message - réponse sous quelques jours ouvrés.",
+    "name": "Nom",
+    "email": "E-mail",
+    "requestType": "Type de demande",
+    "requestTypePlaceholder": "Choisir…",
+    "requestTypes": {
+      "job": "Offre d'emploi / CDI",
+      "freelance": "Mission freelance / projet",
+      "collaboration": "Collaboration",
+      "other": "Autre"
+    },
+    "subject": "Sujet",
+    "message": "Message",
+    "submit": "Envoyer",
+    "sending": "Envoi…",
+    "success": "Message envoyé. Merci !",
+    "error": "Une erreur est survenue. Réessayez ou écrivez à contact@clement-daguenet.fr.",
+    "namePlaceholder": "Votre nom",
+    "emailPlaceholder": "vous@exemple.fr",
+    "subjectPlaceholder": "Objet de votre message",
+    "messagePlaceholder": "Votre message…"
+  },
+  "cv": {
+    "title": "CV & Parcours",
+    "subtitle": "L'essentiel de mon parcours, en chronologie inverse.",
+    "download": "Télécharger le PDF",
+    "floatingLabel": "CV PDF"
+  },
+  "footer": {
+    "rights": "Tous droits réservés.",
+    "legal": "Mentions légales",
+    "mirror": "Portfolio gaming · WoXayZ",
+    "builtWith": "Next.js · TypeScript · Tailwind"
+  },
+  "mirror": {
+    "label": "Passer au portfolio gaming",
+    "pro": "PRO",
+    "gaming": "GAMING",
+    "switching": "Basculement…"
+  },
+  "language": {
+    "label": "Langue",
+    "fr": "FR",
+    "en": "EN"
+  },
+  "notFound": {
+    "prompt": "clement-daguenet.fr - bash",
+    "line1": "404 - Page not found",
+    "line2": "La page demandée n'existe pas ou a été déplacée.",
+    "line3": "Tapez `cd /` pour revenir à l'accueil.",
+    "home": "Retour à l'accueil"
+  },
+  "legal": {
+    "title": "Mentions légales",
+    "editorTitle": "Éditeur",
+    "editorBody": "Ce site est édité par Clément Daguenet, particulier.\nContact: contact@clement-daguenet.fr",
+    "hostTitle": "Hébergeur",
+    "hostBody": "OVH SAS - 2 rue Kellermann, 59100 Roubaix, France.\nSite: https://www.ovhcloud.com",
+    "ipTitle": "Propriété intellectuelle",
+    "ipBody": "L'ensemble des contenus (textes, visuels, code) présents sur ce site sont la propriété de Clément Daguenet, sauf mention contraire. Toute reproduction non autorisée est interdite.",
+    "dataTitle": "Données personnelles",
+    "dataBody": "Les informations envoyées via le formulaire de contact sont utilisées uniquement pour répondre à votre demande. Aucune donnée n'est cédée à des tiers."
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "projects": [
+    {
+      "id": "climsystem",
+      "title": "Climsystem Distribution Atlantique",
+      "summaryFr": "Site vitrine Next.js/React réalisé en solo lors d'un workshop bac+5 (2026). Présentation de l'entreprise et de son offre de climatisation.",
+      "summaryEn": "Next.js/React showcase site built solo during a bac+5 workshop (2026). Presents the company and its climate-control offering.",
+      "techs": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS"
+      ],
+      "url": "https://www.climsystem-distribution-atlantique.fr/",
+      "image": "/images/pro/climsystem.webp",
+      "featured": true
+    },
+    {
+      "id": "remind-r",
+      "title": "Remind-r",
+      "summaryFr": "Application web développée en équipe au sein d'une startup. Gestion de rappels et d'organisation au quotidien.",
+      "summaryEn": "Web application built as a team inside a startup. Everyday reminders and organization.",
+      "techs": [
+        "React",
+        "Node.js",
+        "TypeScript"
+      ],
+      "url": "https://www.remind-r.com/",
+      "image": "/images/pro/remindr.webp",
+      "featured": true
+    },
+    {
+      "id": "recolor-palette",
+      "title": "RecolorPalette",
+      "summaryFr": "Plugins Paint.NET en C# pour recoloriser et manipuler des palettes d'images rapidement.",
+      "summaryEn": "Paint.NET plugins in C# to recolor and manipulate image palettes quickly.",
+      "techs": [
+        "C#",
+        "Paint.NET"
+      ],
+      "url": "https://github.com/ClementDaguenet/RecolorPalette",
+      "image": "/images/pro/recolor.webp",
+      "featured": false
+    },
+    {
+      "id": "slide-and-strike",
+      "title": "Slide & Strike",
+      "summaryFr": "Jeu de bowling 3D sous Unity: physique, cibles et mécaniques de gravité.",
+      "summaryEn": "3D bowling game in Unity with physics, targets and gravity mechanics.",
+      "techs": [
+        "Unity",
+        "C#"
+      ],
+      "url": "https://github.com/ClementDaguenet/slide-and-strike",
+      "image": "/images/pro/slide.webp",
+      "featured": false
+    },
+    {
+      "id": "api-entreprise",
+      "title": "Interface API Entreprise",
+      "summaryFr": "Interface Next.js/React en développement pour consommer une API métier. Projet confidentiel (privé).",
+      "summaryEn": "Next.js/React interface in progress to consume a business API. Confidential (private) project.",
+      "techs": [
+        "Next.js",
+        "React",
+        "TypeScript"
+      ],
+      "url": "",
+      "image": "/images/pro/api-entreprise.webp",
+      "featured": true
+    }
+  ]
+}

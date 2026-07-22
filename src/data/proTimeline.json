@@ -1,0 +1,103 @@
+{
+  "timeline": [
+    {
+      "id": "api-entreprise",
+      "date": "2026 - en cours",
+      "titleFr": "Interface API Entreprise",
+      "titleEn": "Enterprise API Interface",
+      "descriptionFr": "Développement d'une interface Next.js/React pour une API de recherche d'entreprise. Projet confidentiel en cours.",
+      "descriptionEn": "Building a Next.js/React interface for a searching compay API. Confidential project in progress.",
+      "type": "project"
+    },
+    {
+      "id": "master-mds",
+      "date": "2024 - 2026",
+      "titleFr": "Master Développement - MyDigitalSchool Angers",
+      "titleEn": "Master's in Development - MyDigitalSchool Angers",
+      "descriptionFr": "Master Développeur Full-Stack à MyDigitalSchool Angers. Approfondissement des stacks modernes et de la conduite de projet.",
+      "descriptionEn": "Full-Stack Development Master's at MyDigitalSchool Angers. Deepening modern stacks and project delivery.",
+      "type": "education"
+    },
+    {
+      "id": "climsystem",
+      "date": "2026",
+      "titleFr": "Climsystem Distribution Atlantique",
+      "titleEn": "Climsystem Distribution Atlantique",
+      "descriptionFr": "Site Next.js/React réalisé en solo lors d'un workshop bac+5.",
+      "descriptionEn": "Next.js/React site built solo during a bac+5 workshop.",
+      "type": "project"
+    },
+    {
+      "id": "microtec",
+      "date": "Depuis sept. 2023",
+      "titleFr": "Alternance - Microtec (Le Mans)",
+      "titleEn": "Apprenticeship - Microtec (Le Mans)",
+      "descriptionFr": "Analyste développeur en alternance: développement, refontes, correction de bugs et support applicatif.",
+      "descriptionEn": "Apprentice analyst developer: development, redesigns, bug fixing and application support.",
+      "type": "work"
+    },
+    {
+      "id": "remind-r",
+      "date": "2024 - 2026",
+      "titleFr": "Remind-r - startup",
+      "titleEn": "Remind-r - startup",
+      "descriptionFr": "Développement web en équipe au sein d'une startup produit.",
+      "descriptionEn": "Team web development inside a product startup.",
+      "type": "project"
+    },
+    {
+      "id": "bachelor-iscod",
+      "date": "2023 - 2024",
+      "titleFr": "Bachelor Dev Web - ISCOD",
+      "titleEn": "Web Dev Bachelor - ISCOD",
+      "descriptionFr": "Bachelor Concepteur Développeur d'Applications à l'ISCOD.",
+      "descriptionEn": "Application Designer & Developer Bachelor at ISCOD.",
+      "type": "education"
+    },
+    {
+      "id": "auchan",
+      "date": "Depuis janv. 2023",
+      "titleFr": "Auchan - CDI / intérim",
+      "titleEn": "Auchan - permanent / interim",
+      "descriptionFr": "Expérience terrain en grande distribution, en parallèle des études et de l'alternance.",
+      "descriptionEn": "Retail floor experience alongside studies and apprenticeship.",
+      "type": "work"
+    },
+    {
+      "id": "outils-perso",
+      "date": "2022 - 2024",
+      "titleFr": "RecolorPalette & Slide & Strike",
+      "titleEn": "RecolorPalette & Slide & Strike",
+      "descriptionFr": "Outils et jeux personnels: plugins Paint.NET en C# et bowling 3D Unity.",
+      "descriptionEn": "Personal tools and games: Paint.NET C# plugins and a Unity 3D bowling game.",
+      "type": "project"
+    },
+    {
+      "id": "bts-sn",
+      "date": "2021 - 2023",
+      "titleFr": "BTS SNIR - Touchard Washington (Le Mans)",
+      "titleEn": "BTS SNIR - Touchard Washington (Le Mans)",
+      "descriptionFr": "Brevet de Technicien Supérieur Systèmes Numériques, option Informatique et Réseaux.",
+      "descriptionEn": "Advanced technician diploma in Digital Systems, Computing & Networks option.",
+      "type": "education"
+    },
+    {
+      "id": "stages-jobs",
+      "date": "2020 - 2022",
+      "titleFr": "Stages & jobs étudiants",
+      "titleEn": "Internships & student jobs",
+      "descriptionFr": "Technigraph (2022), Vandemoortele (2022), Bouleries Jump (2021), Biggotières (2020-2021).",
+      "descriptionEn": "Technigraph (2022), Vandemoortele (2022), Bouleries Jump (2021), Biggotières (2020-2021).",
+      "type": "work"
+    },
+    {
+      "id": "debuts",
+      "date": "Collège à aujourd'hui",
+      "titleFr": "Débuts: Codage Minecraft",
+      "titleEn": "Beginnings: Minecraft coding",
+      "descriptionFr": "Passion née au collège avec Minecraft, puis progression vers le développement logiciel.",
+      "descriptionEn": "Passion born in middle school with Minecraft, then growing into software development.",
+      "type": "life"
+    }
+  ]
+}
