@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Simple in-memory rate limiter (per process).
  * Good enough for a single Node instance on a VPS.
  */

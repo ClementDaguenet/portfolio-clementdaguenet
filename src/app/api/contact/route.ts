@@ -1,4 +1,4 @@
-﻿import { NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { CONTACT_FROM, CONTACT_TO } from "@/lib/site";
 import { clientIp, rateLimit } from "@/lib/rate-limit";
