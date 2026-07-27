@@ -4,13 +4,20 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { GAMING_URL } from "@/lib/site";
+import type { ProPageKey } from "@/lib/data";
 
-export function Footer() {
+export function Footer({
+  pages,
+}: {
+  pages?: Partial<Record<ProPageKey, boolean>>;
+}) {
   const t = useTranslations("footer");
   const pathname = usePathname();
   const year = new Date().getFullYear();
 
   if (pathname?.startsWith("/admin")) return null;
+
+  const legalOn = !pages || pages["mentions-legales"] !== false;
 
   return (
     <footer className="mt-auto border-t border-[var(--color-border)] bg-[var(--color-card)]/60">
@@ -25,12 +32,14 @@ export function Footer() {
           <p className="text-xs">{t("builtWith")}</p>
         </div>
         <div className="flex flex-wrap items-center gap-4 text-sm">
-          <Link
-            href="/mentions-legales"
-            className="text-[var(--color-muted)] transition hover:text-[var(--color-accent)]"
-          >
-            {t("legal")}
-          </Link>
+          {legalOn ? (
+            <Link
+              href="/mentions-legales"
+              className="text-[var(--color-muted)] transition hover:text-[var(--color-accent)]"
+            >
+              {t("legal")}
+            </Link>
+          ) : null}
           <a
             href={GAMING_URL}
             className="text-[var(--color-muted)] transition hover:text-[var(--color-accent)]"

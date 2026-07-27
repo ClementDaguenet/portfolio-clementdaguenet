@@ -1,4 +1,4 @@
-import { promises as fs } from "fs";
+﻿import { promises as fs } from "fs";
 import { NextResponse } from "next/server";
 import { requireAdmin } from "@/lib/admin-auth";
 import {
@@ -21,7 +21,10 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: "Fichier inconnu" }, { status: 400 });
   }
 
-  const raw = await fs.readFile(resolveProDataPath(key), "utf8");
+  const raw = (await fs.readFile(resolveProDataPath(key), "utf8")).replace(
+    /^\uFEFF/,
+    "",
+  );
   return NextResponse.json({ key, label: PRO_CONTENT_FILES[key].label, raw });
 }
 
@@ -37,7 +40,7 @@ export async function PUT(request: Request) {
   }
 
   try {
-    const parsed = JSON.parse(body.raw ?? "");
+    const parsed = JSON.parse((body.raw ?? "").replace(/^\uFEFF/, ""));
     const pretty = `${JSON.stringify(parsed, null, 2)}\n`;
     await fs.writeFile(resolveProDataPath(key), pretty, "utf8");
     return NextResponse.json({ ok: true });

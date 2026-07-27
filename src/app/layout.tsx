@@ -61,6 +61,7 @@ export default async function RootLayout({
 }>) {
   const locale = await getLocale();
   const messages = await getMessages();
+  const pages = getSiteSettings().pages;
 
   return (
     <html lang={locale} data-theme="pro">
@@ -68,9 +69,9 @@ export default async function RootLayout({
         className={`${playfair.variable} ${sourceSerif.variable} flex min-h-screen flex-col antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
-          <Header />
+          <Header pages={pages} />
           <main className="flex-1">{children}</main>
-          <Footer />
+          <Footer pages={pages} />
         </NextIntlClientProvider>
       </body>
     </html>

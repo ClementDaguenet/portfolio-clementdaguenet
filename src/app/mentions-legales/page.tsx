@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { PageTransition } from "@/components/PageTransition";
+import { requirePage } from "@/lib/data";
 import { OG_IMAGE } from "@/lib/site";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -23,6 +24,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function MentionsLegalesPage() {
+  requirePage("mentions-legales");
   const t = await getTranslations("legal");
 
   const sections = [

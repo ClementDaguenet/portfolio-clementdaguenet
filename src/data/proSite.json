@@ -1,6 +1,11 @@
 {
   "headshot": "/images/pro/avatar_bkg_light_blue-blue.png",
-  "ogImage": "/images/pro/send.webp",
+  "ogImage": "/images/pro/og.webp",
   "cvPath": "/documents/CV_Clement_Daguenet.pdf",
-  "favicon": "/favicon.ico"
+  "favicon": "/favicon.ico",
+  "pages": {
+    "cv": true,
+    "contact": true,
+    "mentions-legales": true
+  }
 }

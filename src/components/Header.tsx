@@ -7,19 +7,30 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { SiteSwitch } from "@/components/SiteSwitch";
+import type { ProPageKey } from "@/lib/data";
 
-const links = [
-  { href: "/", key: "home" as const },
-  { href: "/cv", key: "cv" as const },
-  { href: "/contact", key: "contact" as const },
+const links: { href: string; key: "home" | ProPageKey; page?: ProPageKey }[] = [
+  { href: "/", key: "home" },
+  { href: "/cv", key: "cv", page: "cv" },
+  { href: "/contact", key: "contact", page: "contact" },
 ];
 
-export function Header() {
+export function Header({
+  pages,
+}: {
+  pages?: Partial<Record<ProPageKey, boolean>>;
+}) {
   const t = useTranslations("nav");
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
   if (pathname?.startsWith("/admin")) return null;
+
+  const visible = links.filter((link) => {
+    if (!link.page) return true;
+    if (!pages || !(link.page in pages)) return true;
+    return pages[link.page] !== false;
+  });
 
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--color-border)]/80 bg-[var(--color-bg)]/85 backdrop-blur-md">
@@ -32,7 +43,7 @@ export function Header() {
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex" aria-label="Main">
-          {links.map((link) => {
+          {visible.map((link) => {
             const active = pathname === link.href;
             return (
               <Link
@@ -71,7 +82,7 @@ export function Header() {
           aria-label="Mobile"
         >
           <ul className="flex flex-col gap-2">
-            {links.map((link) => (
+            {visible.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}

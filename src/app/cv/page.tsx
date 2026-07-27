@@ -3,7 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { FloatingCvButton } from "@/components/FloatingCvButton";
 import { PageTransition } from "@/components/PageTransition";
 import { Timeline } from "@/components/Timeline";
-import { getSiteSettings, getTimeline } from "@/lib/data";
+import { getSiteSettings, getTimeline, requirePage } from "@/lib/data";
 import { OG_IMAGE } from "@/lib/site";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -28,6 +28,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function CvPage() {
+  requirePage("cv");
   const t = await getTranslations("cv");
   const timeline = getTimeline();
   const site = getSiteSettings();

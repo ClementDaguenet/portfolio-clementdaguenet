@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useCallback, useEffect, useState } from "react";
 
@@ -13,21 +13,28 @@ type ImageSpec = {
   jsonField: string;
 };
 
+type PageOption = { key: string; label: string };
+
 export function AdminPanel({
   title,
   files,
   imageSpecs,
+  pageOptions = [],
+  siteContentKey = "site",
 }: {
   title: string;
   files: FileMeta[];
   imageSpecs: ImageSpec[];
+  pageOptions?: PageOption[];
+  siteContentKey?: string;
 }) {
   const [authed, setAuthed] = useState<boolean | null>(null);
   const [password, setPassword] = useState("");
-  const [tab, setTab] = useState<"content" | "images">("content");
+  const [tab, setTab] = useState<"content" | "images" | "pages">("content");
   const [active, setActive] = useState(files[0]?.key ?? "");
   const [raw, setRaw] = useState("");
   const [images, setImages] = useState<ImageItem[]>([]);
+  const [pageFlags, setPageFlags] = useState<Record<string, boolean>>({});
   const [status, setStatus] = useState("");
   const [busy, setBusy] = useState(false);
 
@@ -69,6 +76,30 @@ export function AdminPanel({
     }
   }, []);
 
+  const loadPages = useCallback(async () => {
+    setBusy(true);
+    setStatus("");
+    try {
+      const res = await fetch(
+        `/api/admin/content?key=${encodeURIComponent(siteContentKey)}`,
+      );
+      const data = (await res.json()) as { raw?: string; error?: string };
+      if (!res.ok) throw new Error(data.error || "Chargement impossible");
+      const parsed = JSON.parse((data.raw ?? "{}").replace(/^\uFEFF/, "")) as {
+        pages?: Record<string, boolean>;
+      };
+      const next: Record<string, boolean> = {};
+      for (const opt of pageOptions) {
+        next[opt.key] = parsed.pages?.[opt.key] !== false;
+      }
+      setPageFlags(next);
+    } catch (e) {
+      setStatus(e instanceof Error ? e.message : "Erreur");
+    } finally {
+      setBusy(false);
+    }
+  }, [pageOptions, siteContentKey]);
+
   useEffect(() => {
     if (authed && files[0]) void loadFile(files[0].key);
   }, [authed, files, loadFile]);
@@ -99,6 +130,7 @@ export function AdminPanel({
     setAuthed(false);
     setRaw("");
     setImages([]);
+    setPageFlags({});
   }
 
   async function save() {
@@ -113,6 +145,37 @@ export function AdminPanel({
       const data = (await res.json()) as { error?: string };
       if (!res.ok) throw new Error(data.error || "Sauvegarde impossible");
       setStatus("Sauvegardé - recharge la page du site pour voir le rendu");
+    } catch (err) {
+      setStatus(err instanceof Error ? err.message : "Erreur");
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  async function savePages() {
+    setBusy(true);
+    setStatus("");
+    try {
+      const res = await fetch(
+        `/api/admin/content?key=${encodeURIComponent(siteContentKey)}`,
+      );
+      const data = (await res.json()) as { raw?: string; error?: string };
+      if (!res.ok) throw new Error(data.error || "Chargement impossible");
+      const parsed = JSON.parse(
+        (data.raw ?? "{}").replace(/^\uFEFF/, ""),
+      ) as Record<string, unknown>;
+      parsed.pages = { ...pageFlags };
+      const put = await fetch("/api/admin/content", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          key: siteContentKey,
+          raw: JSON.stringify(parsed, null, 2),
+        }),
+      });
+      const putData = (await put.json()) as { error?: string };
+      if (!put.ok) throw new Error(putData.error || "Sauvegarde impossible");
+      setStatus("Pages mises à jour - recharge le site pour voir le rendu");
     } catch (err) {
       setStatus(err instanceof Error ? err.message : "Erreur");
     } finally {
@@ -273,6 +336,22 @@ export function AdminPanel({
           >
             Images
           </button>
+          {pageOptions.length > 0 ? (
+            <button
+              type="button"
+              onClick={() => {
+                setTab("pages");
+                void loadPages();
+              }}
+              className={`rounded-lg px-3 py-1.5 text-sm font-medium ${
+                tab === "pages"
+                  ? "bg-blue-600 text-white"
+                  : "border border-slate-600 text-slate-200 hover:bg-slate-800"
+              }`}
+            >
+              Pages
+            </button>
+          ) : null}
         </div>
 
         {tab === "content" ? (
@@ -305,6 +384,56 @@ export function AdminPanel({
               <button
                 type="button"
                 onClick={() => void save()}
+                disabled={busy}
+                className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-500 disabled:opacity-60"
+              >
+                Sauvegarder
+              </button>
+              {status ? <p className="text-sm text-slate-300">{status}</p> : null}
+            </div>
+          </>
+        ) : tab === "pages" ? (
+          <>
+            <div className="rounded-xl border border-slate-700 bg-slate-900 p-5">
+              <h2 className="mb-1 text-sm font-semibold uppercase tracking-wide text-slate-300">
+                Affichage des pages
+              </h2>
+              <p className="mb-5 text-sm text-slate-400">
+                Désactive une page pour la retirer du menu et renvoyer une 404
+                si on y accède directement.
+              </p>
+              <ul className="space-y-3">
+                {pageOptions.map((opt) => (
+                  <li
+                    key={opt.key}
+                    className="flex items-center justify-between gap-4 rounded-lg border border-slate-700 bg-slate-950 px-4 py-3"
+                  >
+                    <div>
+                      <p className="font-medium text-slate-100">{opt.label}</p>
+                      <p className="font-mono text-xs text-slate-500">/{opt.key}</p>
+                    </div>
+                    <label className="inline-flex cursor-pointer items-center gap-2 text-sm text-slate-300">
+                      <span>{pageFlags[opt.key] ? "Visible" : "Masquée"}</span>
+                      <input
+                        type="checkbox"
+                        checked={pageFlags[opt.key] ?? true}
+                        onChange={(e) =>
+                          setPageFlags((prev) => ({
+                            ...prev,
+                            [opt.key]: e.target.checked,
+                          }))
+                        }
+                        className="h-4 w-4 accent-emerald-500"
+                      />
+                    </label>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="mt-4 flex flex-wrap items-center gap-3">
+              <button
+                type="button"
+                onClick={() => void savePages()}
                 disabled={busy}
                 className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-500 disabled:opacity-60"
               >
@@ -346,7 +475,7 @@ export function AdminPanel({
                 Uploader (.webp recommandé)
                 <input
                   type="file"
-                  accept="image/webp,image/png,image/jpeg,image/avif,image/gif,.pdf,.ico"
+                  accept="image/webp,image/png,image/jpeg,image/avif,image/gif,.ico"
                   className="hidden"
                   onChange={(e) => void onUpload(e)}
                 />

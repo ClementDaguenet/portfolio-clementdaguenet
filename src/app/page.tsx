@@ -6,7 +6,7 @@ import { PageTransition } from "@/components/PageTransition";
 import { ProjectCard } from "@/components/ProjectCard";
 import { SkillBadges } from "@/components/SkillBadges";
 import { Timeline } from "@/components/Timeline";
-import { getProjects, getSiteSettings, getSkills, getTimelineExcerpt } from "@/lib/data";
+import { getProjects, getSiteSettings, getSkills, getTimelineExcerpt, isPageEnabled } from "@/lib/data";
 import { OG_IMAGE } from "@/lib/site";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -38,6 +38,8 @@ export default async function HomePage() {
   const excerpt = getTimelineExcerpt(3);
   const site = getSiteSettings();
   const skills = getSkills();
+  const showCv = isPageEnabled("cv");
+  const showContact = isPageEnabled("contact");
 
   return (
     <PageTransition>
@@ -114,30 +116,34 @@ export default async function HomePage() {
               {t("timeline.subtitle")}
             </p>
           </div>
-          <Link
-            href="/cv"
-            className="text-sm font-medium text-[var(--color-accent)] hover:underline"
-          >
-            {t("timeline.seeAll")}
-          </Link>
+          {showCv ? (
+            <Link
+              href="/cv"
+              className="text-sm font-medium text-[var(--color-accent)] hover:underline"
+            >
+              {t("timeline.seeAll")}
+            </Link>
+          ) : null}
         </div>
         <Timeline items={excerpt} />
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-16 md:px-6">
-        <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-card)]/80 px-6 py-12 text-center shadow-[0_16px_40px_-24px_rgba(15,23,42,0.25)] md:px-12">
-          <h2 className="text-3xl text-[var(--color-primary)]">{t("cta.title")}</h2>
-          <p className="mx-auto mt-3 max-w-xl text-[var(--color-muted)]">
-            {t("cta.subtitle")}
-          </p>
-          <Link
-            href="/contact"
-            className="mt-8 inline-flex items-center rounded-md bg-[var(--color-primary)] px-6 py-3 text-sm font-medium text-white transition hover:bg-[var(--color-accent)]"
-          >
-            {t("cta.button")}
-          </Link>
-        </div>
-      </section>
+      {showContact ? (
+        <section className="mx-auto max-w-6xl px-4 py-16 md:px-6">
+          <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-card)]/80 px-6 py-12 text-center shadow-[0_16px_40px_-24px_rgba(15,23,42,0.25)] md:px-12">
+            <h2 className="text-3xl text-[var(--color-primary)]">{t("cta.title")}</h2>
+            <p className="mx-auto mt-3 max-w-xl text-[var(--color-muted)]">
+              {t("cta.subtitle")}
+            </p>
+            <Link
+              href="/contact"
+              className="mt-8 inline-flex items-center rounded-md bg-[var(--color-primary)] px-6 py-3 text-sm font-medium text-white transition hover:bg-[var(--color-accent)]"
+            >
+              {t("cta.button")}
+            </Link>
+          </div>
+        </section>
+      ) : null}
     </PageTransition>
   );
 }
