@@ -48,4 +48,4 @@ jobs:
             npm ci
             npm run build
 
-            pm2 restart wox_pro
+            pm2 restart wox_pro --update-env
