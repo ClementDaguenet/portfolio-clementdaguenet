@@ -9,7 +9,7 @@ type Body = {
   subject?: string;
   requestType?: string;
   message?: string;
-  /** Honeypot — must stay empty */
+  /** Honeypot - must stay empty */
   website?: string;
 };
 

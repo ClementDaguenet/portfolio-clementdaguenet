@@ -1,5 +1,6 @@
 import { readFileSync } from "fs";
 import path from "path";
+import { notFound } from "next/navigation";
 import type {
   ProProject,
   ProProjectsData,
@@ -34,13 +35,26 @@ export function getSkills(): string[] {
   return readJson<ProSkillsData>("src/data/proSkills.json").skills;
 }
 
+export type ProPageKey = "cv" | "contact" | "mentions-legales";
+
 export type ProSiteSettings = {
   headshot: string;
   ogImage: string;
   cvPath: string;
   favicon: string;
+  pages?: Partial<Record<ProPageKey, boolean>>;
 };
 
 export function getSiteSettings(): ProSiteSettings {
   return readJson<ProSiteSettings>("src/data/proSite.json");
+}
+
+export function isPageEnabled(page: ProPageKey): boolean {
+  const pages = getSiteSettings().pages;
+  if (!pages || !(page in pages)) return true;
+  return pages[page] !== false;
+}
+
+export function requirePage(page: ProPageKey): void {
+  if (!isPageEnabled(page)) notFound();
 }

@@ -41,6 +41,15 @@ const imageSpecs = [
 
 export default function AdminPage() {
   return (
-    <AdminPanel title="Admin PRO" files={files} imageSpecs={imageSpecs} />
+    <AdminPanel
+      title="Admin PRO"
+      files={files}
+      imageSpecs={imageSpecs}
+      pageOptions={[
+        { key: "cv", label: "CV" },
+        { key: "contact", label: "Contact" },
+        { key: "mentions-legales", label: "Mentions légales" },
+      ]}
+    />
   );
 }

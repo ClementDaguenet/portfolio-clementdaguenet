@@ -28,7 +28,7 @@ jobs:
             --exclude=.github/
             --exclude=node_modules/
             --exclude=.next/
-            --exclude=.env
+            --exclude=.env*
             --exclude=.gitignore
           PRE_SCRIPT: "echo 🏁 Start at: && date -u"
           POST_SCRIPT: "echo ✅ Done at: && date -u"
@@ -43,7 +43,9 @@ jobs:
           script: |
             cd /var/www/wox/pro
 
+            rm -rf .next
+
             npm ci
             npm run build
 
-            pm2 restart wox_pro
+            pm2 restart wox_pro --update-env
