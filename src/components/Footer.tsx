@@ -10,7 +10,7 @@ export function Footer() {
   const pathname = usePathname();
   const year = new Date().getFullYear();
 
-  if (pathname?.startsWith("/admin")) return null;
+  if (pathname?.startsWith("/admin") || pathname?.startsWith("/ape")) return null;
 
   return (
     <footer className="mt-auto border-t border-[var(--color-border)] bg-[var(--color-card)]/60">
