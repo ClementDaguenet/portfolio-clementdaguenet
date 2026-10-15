@@ -1,14 +1,14 @@
 {
   "meta": {
     "siteName": "Clément Daguenet",
-    "defaultTitle": "Clément Daguenet - Développeur Full-Stack",
-    "defaultDescription": "Portfolio de Clément Daguenet, développeur Full-Stack basé entre Le Mans et Angers. Projets web, parcours et contact.",
+    "defaultTitle": "Clément Daguenet - Développeur Full-Stack freelance",
+    "defaultDescription": "Portfolio de Clément Daguenet, développeur full-stack freelance entre Le Mans et Angers. Applications web, refontes et contact.",
     "homeTitle": "Accueil",
-    "homeDescription": "Développeur Full-Stack en Master à MyDigitalSchool Angers, en alternance chez Microtec. Découvrez mes projets et mon parcours.",
+    "homeDescription": "Développeur full-stack freelance entre Le Mans et Angers. Applications web, refontes et accompagnement de projet.",
     "cvTitle": "CV & Parcours",
     "cvDescription": "Parcours professionnel et formation de Clément Daguenet, développeur Full-Stack.",
     "contactTitle": "Contact",
-    "contactDescription": "Contactez Clément Daguenet pour une opportunité CDI, un projet ou une collaboration.",
+    "contactDescription": "Contactez Clément Daguenet pour une mission freelance, un projet web ou une collaboration.",
     "legalTitle": "Mentions légales",
     "legalDescription": "Mentions légales du site clement-daguenet.fr."
   },
@@ -20,11 +20,11 @@
   },
   "hero": {
     "title": "Clément Daguenet",
-    "subtitle": "Développeur Full-Stack",
-    "hook": "Étudiant en Master à MyDigitalSchool Angers et développeur en alternance chez Microtec au Mans, je conçois des logiciels et des applications web modernes, fiables et soigné(e)s. Basé entre Le Mans et Angers, je recherche un CDI à la fin de mon Master pour octobre 2026.",
+    "subtitle": "Développeur Full-Stack freelance",
+    "hook": "Développeur full-stack, je conçois des applications web modernes, fiables et soignées. Basé entre Le Mans et Angers, je travaille en freelance pour des entreprises et des indépendants, sur place ou à distance.",
     "ctaProjects": "Voir les projets",
-    "ctaCv": "Télécharger le CV",
-    "location": "Le Mans / Angers · Recherche CDI · Fin de Master"
+    "ctaContact": "Discuter d'un projet",
+    "location": "Le Mans / Angers · Freelance · À distance"
   },
   "skills": {
     "title": "Compétences",
@@ -50,7 +50,7 @@
   },
   "cta": {
     "title": "Travaillons ensemble",
-    "subtitle": "Une opportunité CDI, un projet web ou une question ? Écrivons-nous.",
+    "subtitle": "Un site, une application, une refonte ou une question ? Écrivez-moi.",
     "button": "Me contacter"
   },
   "contact": {
@@ -61,8 +61,8 @@
     "requestType": "Type de demande",
     "requestTypePlaceholder": "Choisir…",
     "requestTypes": {
-      "job": "Offre d'emploi / CDI",
       "freelance": "Mission freelance / projet",
+      "maintenance": "Refonte ou maintenance",
       "collaboration": "Collaboration",
       "other": "Autre"
     },

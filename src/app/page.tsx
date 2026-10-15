@@ -60,18 +60,19 @@ export default async function HomePage() {
               {t("hero.hook")}
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
+              {showContact ? (
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center rounded-md bg-[var(--color-primary)] px-5 py-2.5 text-sm font-medium text-white transition hover:bg-[var(--color-accent)]"
+                >
+                  {t("hero.ctaContact")}
+                </Link>
+              ) : null}
               <a
                 href="#projects"
-                className="inline-flex items-center rounded-md bg-[var(--color-primary)] px-5 py-2.5 text-sm font-medium text-white transition hover:bg-[var(--color-accent)]"
-              >
-                {t("hero.ctaProjects")}
-              </a>
-              <a
-                href={site.cvPath}
-                download
                 className="inline-flex items-center rounded-md border border-[var(--color-border)] bg-[var(--color-card)] px-5 py-2.5 text-sm font-medium text-[var(--color-primary)] shadow-sm transition hover:border-[var(--color-accent)]"
               >
-                {t("hero.ctaCv")}
+                {t("hero.ctaProjects")}
               </a>
             </div>
           </div>

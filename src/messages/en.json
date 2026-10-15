@@ -1,14 +1,14 @@
 {
   "meta": {
     "siteName": "Clément Daguenet",
-    "defaultTitle": "Clément Daguenet - Full-Stack Developer",
-    "defaultDescription": "Portfolio of Clément Daguenet, Full-Stack developer based between Le Mans and Angers. Projects, career path and contact.",
+    "defaultTitle": "Clément Daguenet - Freelance Full-Stack Developer",
+    "defaultDescription": "Portfolio of Clément Daguenet, freelance full-stack developer between Le Mans and Angers. Web applications, redesigns and contact.",
     "homeTitle": "Home",
-    "homeDescription": "Full-Stack developer in a Master's program at MyDigitalSchool Angers, apprenticing at Microtec. Explore projects and career path.",
+    "homeDescription": "Freelance full-stack developer between Le Mans and Angers. Web applications, redesigns and project support.",
     "cvTitle": "CV & Career",
     "cvDescription": "Career path and education of Clément Daguenet, Full-Stack developer.",
     "contactTitle": "Contact",
-    "contactDescription": "Get in touch with Clément Daguenet for a permanent role, a project or a collaboration.",
+    "contactDescription": "Get in touch with Clément Daguenet for a freelance mission, a web project or a collaboration.",
     "legalTitle": "Legal notice",
     "legalDescription": "Legal notice for clement-daguenet.fr."
   },
@@ -20,11 +20,11 @@
   },
   "hero": {
     "title": "Clément Daguenet",
-    "subtitle": "Full-Stack Developer",
-    "hook": "Master's student at MyDigitalSchool Angers and apprentice developer at Microtec in Le Mans, I build modern, reliable and polished web applications. Based between Le Mans and Angers, I am looking for a permanent role at the end of my Master's for october 2026.",
+    "subtitle": "Freelance Full-Stack Developer",
+    "hook": "I design modern, reliable and polished web applications. Based between Le Mans and Angers, I work freelance with companies and independents, on site or remotely.",
     "ctaProjects": "View projects",
-    "ctaCv": "Download CV",
-    "location": "Le Mans / Angers · Seeking permanent role · End of Master's"
+    "ctaContact": "Discuss a project",
+    "location": "Le Mans / Angers · Freelance · Remote"
   },
   "skills": {
     "title": "Skills",
@@ -50,7 +50,7 @@
   },
   "cta": {
     "title": "Let's work together",
-    "subtitle": "A permanent role, a web project or a question? Let's talk.",
+    "subtitle": "A website, an app, a redesign or a question? Write to me.",
     "button": "Contact me"
   },
   "contact": {
@@ -61,8 +61,8 @@
     "requestType": "Request type",
     "requestTypePlaceholder": "Choose…",
     "requestTypes": {
-      "job": "Job offer / permanent role",
-      "freelance": "Freelance / project",
+      "freelance": "Freelance mission / project",
+      "maintenance": "Redesign or maintenance",
       "collaboration": "Collaboration",
       "other": "Other"
     },
