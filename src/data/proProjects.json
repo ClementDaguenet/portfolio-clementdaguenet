@@ -57,15 +57,16 @@
     },
     {
       "id": "api-entreprise",
-      "title": "Interface API Entreprise",
-      "summaryFr": "Interface Next.js/React en développement pour consommer une API métier. Projet confidentiel (privé).",
-      "summaryEn": "Next.js/React interface in progress to consume a business API. Confidential (private) project.",
+      "title": "Recherche d'entreprises",
+      "titleEn": "Company search",
+      "summaryFr": "Recherche d'entreprises françaises par nom, SIREN, SIRET ou proximité, à partir de l'API publique.",
+      "summaryEn": "French company search by name, SIREN, SIRET or nearby location, using the public API.",
       "techs": [
         "Next.js",
         "React",
         "TypeScript"
       ],
-      "url": "",
+      "url": "/entreprises",
       "image": "/images/pro/api-entreprise.webp",
       "featured": true
     }

@@ -40,7 +40,7 @@ export function getPricing(): ProPricingData {
   return readJson<ProPricingData>("src/data/proPricing.json");
 }
 
-export type ProPageKey = "cv" | "tarifs" | "contact" | "mentions-legales";
+export type ProPageKey = "entreprises" | "cv" | "tarifs" | "contact" | "mentions-legales";
 
 export type ProSiteSettings = {
   headshot: string;

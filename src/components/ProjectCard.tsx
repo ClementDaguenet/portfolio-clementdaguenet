@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { useLocale, useTranslations } from "next-intl";
 import { ExternalLink, Lock } from "lucide-react";
@@ -14,7 +15,9 @@ export function ProjectCard({ project }: Props) {
   const t = useTranslations("projects");
   const locale = useLocale();
   const summary = locale === "en" ? project.summaryEn : project.summaryFr;
+  const title = locale === "en" && project.titleEn ? project.titleEn : project.title;
   const hasUrl = Boolean(project.url);
+  const internal = project.url.startsWith("/");
 
   return (
     <motion.article
@@ -25,7 +28,7 @@ export function ProjectCard({ project }: Props) {
       <div className="relative aspect-[16/10] overflow-hidden bg-[var(--color-primary)]/5">
         <Image
           src={project.image}
-          alt={project.title}
+          alt={title}
           fill
           className="object-cover transition duration-300 group-hover:scale-[1.03]"
           sizes="(max-width: 768px) 100vw, 33vw"
@@ -34,7 +37,7 @@ export function ProjectCard({ project }: Props) {
       <div className="flex flex-1 flex-col gap-3 p-5">
         <div className="flex items-start justify-between gap-2">
           <h3 className="font-[family-name:var(--font-display)] text-lg text-[var(--color-primary)]">
-            {project.title}
+            {title}
           </h3>
           {project.featured ? (
             <span className="shrink-0 text-[10px] uppercase tracking-wide text-[var(--color-accent)]">
@@ -55,7 +58,15 @@ export function ProjectCard({ project }: Props) {
             </li>
           ))}
         </ul>
-        {hasUrl ? (
+        {hasUrl && internal ? (
+          <Link
+            href={project.url}
+            prefetch={false}
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-[var(--color-accent)] hover:underline"
+          >
+            {t("viewProject")}
+          </Link>
+        ) : hasUrl ? (
           <a
             href={project.url}
             target="_blank"

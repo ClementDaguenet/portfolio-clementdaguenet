@@ -3,10 +3,10 @@
     {
       "id": "api-entreprise",
       "date": "2026 - en cours",
-      "titleFr": "Interface API Entreprise",
-      "titleEn": "Enterprise API Interface",
-      "descriptionFr": "Développement d'une interface Next.js/React pour une API de recherche d'entreprise. Projet confidentiel en cours.",
-      "descriptionEn": "Building a Next.js/React interface for a searching compay API. Confidential project in progress.",
+      "titleFr": "Recherche d'entreprises",
+      "titleEn": "Company search",
+      "descriptionFr": "Interface de recherche d'entreprises françaises, publiée sur ce site.",
+      "descriptionEn": "French company search interface, published on this site.",
       "type": "project"
     },
     {

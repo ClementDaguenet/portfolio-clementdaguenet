@@ -5,6 +5,7 @@ export type TimelineType = "work" | "education" | "project" | "life";
 export interface ProProject {
   id: string;
   title: string;
+  titleEn?: string;
   summaryFr: string;
   summaryEn: string;
   techs: string[];

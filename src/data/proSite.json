@@ -4,6 +4,7 @@
   "cvPath": "/documents/cv_clement_daguenet.pdf",
   "favicon": "/favicon.ico",
   "pages": {
+    "entreprises": true,
     "cv": true,
     "tarifs": true,
     "contact": true,

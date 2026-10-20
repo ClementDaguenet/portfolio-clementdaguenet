@@ -13,6 +13,7 @@ const links: { href: string; key: "home" | ProPageKey; page?: ProPageKey }[] = [
   { href: "/", key: "home" },
   { href: "/cv", key: "cv", page: "cv" },
   { href: "/tarifs", key: "tarifs", page: "tarifs" },
+  { href: "/entreprises", key: "entreprises", page: "entreprises" },
   { href: "/contact", key: "contact", page: "contact" },
 ];
 
