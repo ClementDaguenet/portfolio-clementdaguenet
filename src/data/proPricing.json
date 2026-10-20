@@ -1,0 +1,269 @@
+{
+  "titleFr": "Tarifs",
+  "titleEn": "Pricing",
+  "descriptionFr": "Tarifs de création de sites web, maintenance, rédaction et développement sur mesure pour artisans, commerçants et petites entreprises.",
+  "descriptionEn": "Pricing for websites, maintenance, web writing and custom development for tradespeople, shop owners and small businesses.",
+  "introFr": "Je crée des sites web et je développe des outils sur mesure pour les artisans, les commerçants et les petites entreprises. Les forfaits ci-dessous couvrent les besoins les plus courants. Chaque mission est cadrée par un devis.",
+  "introEn": "I build websites and custom tools for tradespeople, shop owners and small businesses. The packages below cover the most common needs. Each job is scoped in a quote.",
+  "vatNoteFr": "TVA non applicable, art. 293 B du CGI.",
+  "vatNoteEn": "VAT not applicable, article 293 B of the French General Tax Code.",
+  "web": {
+    "titleFr": "Création de sites web",
+    "titleEn": "Websites",
+    "introFr": "Trois formules, selon le nombre de pages et les fonctions nécessaires.",
+    "introEn": "Three packages, depending on the number of pages and the features required.",
+    "offers": [
+      {
+        "id": "essentiel",
+        "nameFr": "Site vitrine essentiel",
+        "nameEn": "Essential showcase site",
+        "priceFr": "800 €",
+        "priceEn": "€800",
+        "itemsFr": [
+          "Jusqu'à 3 pages.",
+          "Mise en page adaptée au téléphone, à la tablette et à l'ordinateur.",
+          "Formulaire de contact simple.",
+          "Référencement technique de base.",
+          "Mise en ligne selon le périmètre défini au devis."
+        ],
+        "itemsEn": [
+          "Up to 3 pages.",
+          "Layout adapted to phone, tablet and desktop.",
+          "Simple contact form.",
+          "Basic technical SEO.",
+          "Launch within the scope set in the quote."
+        ]
+      },
+      {
+        "id": "personnalise",
+        "nameFr": "Site vitrine personnalisé",
+        "nameEn": "Custom showcase site",
+        "priceFr": "1 200 €",
+        "priceEn": "€1,200",
+        "featured": true,
+        "badgeFr": "Recommandée",
+        "badgeEn": "Recommended",
+        "itemsFr": [
+          "Jusqu'à 5 pages.",
+          "Design conçu pour votre activité.",
+          "Même adaptation au téléphone, à la tablette et à l'ordinateur.",
+          "Formulaire de contact.",
+          "Référencement technique de base.",
+          "Mise en ligne."
+        ],
+        "itemsEn": [
+          "Up to 5 pages.",
+          "Design shaped to your business.",
+          "The same adaptation to phone, tablet and desktop.",
+          "Contact form.",
+          "Basic technical SEO.",
+          "Launch."
+        ]
+      },
+      {
+        "id": "avance",
+        "nameFr": "Site avec fonctionnalités avancées",
+        "nameEn": "Site with advanced features",
+        "priceFr": "à partir de 1 800 €",
+        "priceEn": "from €1,800",
+        "itemsFr": [
+          "Fonctionnalités spécifiques adaptées au besoin.",
+          "Possibilité d'espace administrateur.",
+          "Gestion de contenus ou de données.",
+          "Réservation ou fonctionnalités métier.",
+          "Chiffrage personnalisé selon la complexité."
+        ],
+        "itemsEn": [
+          "Specific features shaped to the need.",
+          "Admin area possible.",
+          "Content or data management.",
+          "Booking or business features.",
+          "Quote based on complexity."
+        ]
+      }
+    ]
+  },
+  "extras": {
+    "titleFr": "Prestations complémentaires",
+    "titleEn": "Add-ons",
+    "noteFr": "Les pages déjà incluses dans un forfait ne sont pas facturées une seconde fois.",
+    "noteEn": "Pages already included in a package are not billed again.",
+    "items": [
+      {
+        "id": "page-standard",
+        "labelFr": "Page standard supplémentaire",
+        "labelEn": "Extra standard page",
+        "priceFr": "250 €",
+        "priceEn": "€250"
+      },
+      {
+        "id": "page-complexe",
+        "labelFr": "Page complexe avec fonctionnalités spécifiques",
+        "labelEn": "Complex page with specific features",
+        "priceFr": "à partir de 400 €",
+        "priceEn": "from €400"
+      },
+      {
+        "id": "page-accueil",
+        "labelFr": "Page d'accueil personnalisée seule",
+        "labelEn": "Custom homepage only",
+        "priceFr": "à partir de 350 €",
+        "priceEn": "from €350"
+      },
+      {
+        "id": "formulaire",
+        "labelFr": "Formulaire avancé",
+        "labelEn": "Advanced form",
+        "priceFr": "à partir de 100 €",
+        "priceEn": "from €100"
+      },
+      {
+        "id": "reservation",
+        "labelFr": "Intégration d'un système de réservation",
+        "labelEn": "Booking system integration",
+        "priceFr": "à partir de 200 €",
+        "priceEn": "from €200"
+      },
+      {
+        "id": "admin",
+        "labelFr": "Espace administrateur",
+        "labelEn": "Admin area",
+        "priceFr": "à partir de 400 €",
+        "priceEn": "from €400"
+      },
+      {
+        "id": "mise-en-ligne",
+        "labelFr": "Mise en ligne seule",
+        "labelEn": "Launch only",
+        "priceFr": "100 €",
+        "priceEn": "€100"
+      }
+    ]
+  },
+  "maintenance": {
+    "titleFr": "Maintenance",
+    "titleEn": "Maintenance",
+    "noteFr": "Les heures non utilisées ne sont pas reportées. L'hébergement, les licences et les services tiers ne sont pas inclus.",
+    "noteEn": "Unused time is not carried over. Hosting, licences and third-party services are not included.",
+    "plans": [
+      {
+        "id": "essentielle",
+        "nameFr": "Maintenance essentielle",
+        "nameEn": "Essential maintenance",
+        "priceFr": "39 €/mois",
+        "priceEn": "€39/month",
+        "itemsFr": [
+          "Vérifications techniques.",
+          "Mises à jour compatibles.",
+          "Contrôle du bon fonctionnement du site.",
+          "Jusqu'à 30 minutes de petites modifications par mois."
+        ],
+        "itemsEn": [
+          "Technical checks.",
+          "Compatible updates.",
+          "Check that the site is working.",
+          "Up to 30 minutes of small changes per month."
+        ]
+      },
+      {
+        "id": "premium",
+        "nameFr": "Maintenance premium",
+        "nameEn": "Premium maintenance",
+        "priceFr": "79 €/mois",
+        "priceEn": "€79/month",
+        "itemsFr": [
+          "Contenu de la maintenance essentielle.",
+          "Jusqu'à 1 heure de petites modifications par mois.",
+          "Demandes traitées en priorité, sous 2 jours ouvrés."
+        ],
+        "itemsEn": [
+          "Everything in essential maintenance.",
+          "Up to 1 hour of small changes per month.",
+          "Requests handled first, within 2 business days."
+        ]
+      }
+    ]
+  },
+  "writing": {
+    "titleFr": "Rédaction web",
+    "titleEn": "Web writing",
+    "introFr": "Le tarif dépend du format et du travail demandé. Les recherches approfondies et les prestations SEO spécifiques peuvent nécessiter un devis complémentaire.",
+    "introEn": "The price depends on the format and the work involved. In-depth research and specific SEO work may need a separate quote.",
+    "items": [
+      {
+        "id": "texte-court",
+        "labelFr": "Texte court pour une page web",
+        "labelEn": "Short text for a web page",
+        "priceFr": "60 €",
+        "priceEn": "€60"
+      },
+      {
+        "id": "page-standard",
+        "labelFr": "Page web standard, jusqu'à 600 mots",
+        "labelEn": "Standard web page, up to 600 words",
+        "priceFr": "90 €",
+        "priceEn": "€90"
+      },
+      {
+        "id": "page-longue",
+        "labelFr": "Page longue, de 600 à 1 200 mots",
+        "labelEn": "Long page, 600 to 1,200 words",
+        "priceFr": "150 €",
+        "priceEn": "€150"
+      },
+      {
+        "id": "article-court",
+        "labelFr": "Article de blog, jusqu'à 800 mots",
+        "labelEn": "Blog article, up to 800 words",
+        "priceFr": "100 €",
+        "priceEn": "€100"
+      },
+      {
+        "id": "article-long",
+        "labelFr": "Article de blog, de 800 à 1 500 mots",
+        "labelEn": "Blog article, 800 to 1,500 words",
+        "priceFr": "160 €",
+        "priceEn": "€160"
+      },
+      {
+        "id": "relecture",
+        "labelFr": "Relecture et correction",
+        "labelEn": "Proofreading and editing",
+        "priceFr": "à partir de 30 €",
+        "priceEn": "from €30"
+      }
+    ]
+  },
+  "custom": {
+    "titleFr": "Développement sur mesure",
+    "titleEn": "Custom development",
+    "bodyFr": "Les prestations spécifiques sont facturées sur devis, avec un tarif journalier de référence de 200 €.",
+    "bodyEn": "Specific work is quoted per project, with a reference day rate of €200."
+  },
+  "conditions": {
+    "titleFr": "À savoir",
+    "titleEn": "Good to know",
+    "itemsFr": [
+      "Les tarifs sont des prix de lancement.",
+      "Chaque projet fait l'objet d'un devis précisant son périmètre.",
+      "L'hébergement, le nom de domaine, les licences et les abonnements tiers sont facturés séparément lorsqu'ils sont nécessaires.",
+      "La rédaction complète des contenus et les photos professionnelles ne sont pas incluses par défaut dans la création du site.",
+      "Les demandes hors périmètre font l'objet d'un devis complémentaire.",
+      "Les modalités de paiement sont précisées dans le devis."
+    ],
+    "itemsEn": [
+      "These are launch prices.",
+      "Each project comes with a quote that sets its scope.",
+      "Hosting, the domain name, licences and third-party subscriptions are billed separately when they are needed.",
+      "Full copywriting and professional photos are not included in a website by default.",
+      "Requests outside the agreed scope need an additional quote.",
+      "Payment terms are set out in the quote."
+    ]
+  },
+  "cta": {
+    "titleFr": "Discuter d'un projet",
+    "titleEn": "Talk about a project",
+    "bodyFr": "Écrivez-moi pour cadrer le besoin ou demander un devis.",
+    "bodyEn": "Write to me to scope the work or request a quote."
+  }
+}

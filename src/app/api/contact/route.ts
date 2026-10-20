@@ -14,6 +14,7 @@ type Body = {
 };
 
 const REQUEST_TYPES = new Set([
+  "quote",
   "freelance",
   "maintenance",
   "collaboration",

@@ -7,6 +7,7 @@ import { useTranslations } from "next-intl";
 type Status = "idle" | "loading" | "success" | "error";
 
 const REQUEST_TYPES = [
+  "quote",
   "freelance",
   "maintenance",
   "collaboration",

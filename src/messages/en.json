@@ -15,6 +15,7 @@
   "nav": {
     "home": "Home",
     "cv": "CV",
+    "tarifs": "Pricing",
     "contact": "Contact",
     "brand": "Clément Daguenet"
   },
@@ -51,7 +52,8 @@
   "cta": {
     "title": "Let's work together",
     "subtitle": "A website, an app, a redesign or a question? Write to me.",
-    "button": "Contact me"
+    "button": "Contact me",
+    "pricing": "View pricing"
   },
   "contact": {
     "title": "Contact",
@@ -61,6 +63,7 @@
     "requestType": "Request type",
     "requestTypePlaceholder": "Choose…",
     "requestTypes": {
+      "quote": "Quote request",
       "freelance": "Freelance mission / project",
       "maintenance": "Redesign or maintenance",
       "collaboration": "Collaboration",

@@ -5,6 +5,7 @@
   "favicon": "/favicon.ico",
   "pages": {
     "cv": true,
+    "tarifs": true,
     "contact": true,
     "mentions-legales": true
   }

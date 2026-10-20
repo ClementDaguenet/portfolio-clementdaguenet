@@ -47,6 +47,7 @@ export default function AdminPage() {
       imageSpecs={imageSpecs}
       pageOptions={[
         { key: "cv", label: "CV" },
+        { key: "tarifs", label: "Tarifs" },
         { key: "contact", label: "Contact" },
         { key: "mentions-legales", label: "Mentions légales" },
       ]}

@@ -13,6 +13,10 @@ export const PRO_CONTENT_FILES = {
     label: "Competences",
     relativePath: "src/data/proSkills.json",
   },
+  pricing: {
+    label: "Tarifs",
+    relativePath: "src/data/proPricing.json",
+  },
   site: {
     label: "Images / chemins site",
     relativePath: "src/data/proSite.json",

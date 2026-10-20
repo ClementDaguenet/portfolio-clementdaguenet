@@ -15,6 +15,7 @@
   "nav": {
     "home": "Accueil",
     "cv": "CV",
+    "tarifs": "Tarifs",
     "contact": "Contact",
     "brand": "Clément Daguenet"
   },
@@ -51,7 +52,8 @@
   "cta": {
     "title": "Travaillons ensemble",
     "subtitle": "Un site, une application, une refonte ou une question ? Écrivez-moi.",
-    "button": "Me contacter"
+    "button": "Me contacter",
+    "pricing": "Voir les tarifs"
   },
   "contact": {
     "title": "Contact",
@@ -61,6 +63,7 @@
     "requestType": "Type de demande",
     "requestTypePlaceholder": "Choisir…",
     "requestTypes": {
+      "quote": "Demande de devis",
       "freelance": "Mission freelance / projet",
       "maintenance": "Refonte ou maintenance",
       "collaboration": "Collaboration",

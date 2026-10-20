@@ -40,6 +40,7 @@ export default async function HomePage() {
   const skills = getSkills();
   const showCv = isPageEnabled("cv");
   const showContact = isPageEnabled("contact");
+  const showPricing = isPageEnabled("tarifs");
 
   return (
     <PageTransition>
@@ -63,6 +64,7 @@ export default async function HomePage() {
               {showContact ? (
                 <Link
                   href="/contact"
+                  prefetch={false}
                   className="inline-flex items-center rounded-md bg-[var(--color-primary)] px-5 py-2.5 text-sm font-medium text-white transition hover:bg-[var(--color-accent)]"
                 >
                   {t("hero.ctaContact")}
@@ -129,19 +131,37 @@ export default async function HomePage() {
         <Timeline items={excerpt} />
       </section>
 
-      {showContact ? (
+      {showContact || showPricing ? (
         <section className="mx-auto max-w-6xl px-4 py-16 md:px-6">
           <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-card)]/80 px-6 py-12 text-center shadow-[0_16px_40px_-24px_rgba(15,23,42,0.25)] md:px-12">
             <h2 className="text-3xl text-[var(--color-primary)]">{t("cta.title")}</h2>
             <p className="mx-auto mt-3 max-w-xl text-[var(--color-muted)]">
               {t("cta.subtitle")}
             </p>
-            <Link
-              href="/contact"
-              className="mt-8 inline-flex items-center rounded-md bg-[var(--color-primary)] px-6 py-3 text-sm font-medium text-white transition hover:bg-[var(--color-accent)]"
-            >
-              {t("cta.button")}
-            </Link>
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+              {showContact ? (
+                <Link
+                  href="/contact"
+                  prefetch={false}
+                  className="inline-flex items-center rounded-md bg-[var(--color-primary)] px-6 py-3 text-sm font-medium text-white transition hover:bg-[var(--color-accent)]"
+                >
+                  {t("cta.button")}
+                </Link>
+              ) : null}
+              {showPricing ? (
+                <Link
+                  href="/tarifs"
+                  prefetch={false}
+                  className={
+                    showContact
+                      ? "inline-flex items-center rounded-md border border-[var(--color-border)] bg-[var(--color-card)] px-6 py-3 text-sm font-medium text-[var(--color-primary)] shadow-sm transition hover:border-[var(--color-accent)]"
+                      : "inline-flex items-center rounded-md bg-[var(--color-primary)] px-6 py-3 text-sm font-medium text-white transition hover:bg-[var(--color-accent)]"
+                  }
+                >
+                  {t("cta.pricing")}
+                </Link>
+              ) : null}
+            </div>
           </div>
         </section>
       ) : null}

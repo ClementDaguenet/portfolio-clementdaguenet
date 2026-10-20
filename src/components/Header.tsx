@@ -12,6 +12,7 @@ import type { ProPageKey } from "@/lib/data";
 const links: { href: string; key: "home" | ProPageKey; page?: ProPageKey }[] = [
   { href: "/", key: "home" },
   { href: "/cv", key: "cv", page: "cv" },
+  { href: "/tarifs", key: "tarifs", page: "tarifs" },
   { href: "/contact", key: "contact", page: "contact" },
 ];
 
@@ -49,6 +50,7 @@ export function Header({
               <Link
                 key={link.href}
                 href={link.href}
+                prefetch={false}
                 className={`text-sm transition ${
                   active
                     ? "font-semibold text-[var(--color-primary)]"
@@ -86,6 +88,7 @@ export function Header({
               <li key={link.href}>
                 <Link
                   href={link.href}
+                  prefetch={false}
                   onClick={() => setOpen(false)}
                   className="block rounded-md px-2 py-2 text-[var(--color-text)] hover:bg-[var(--color-bg)]"
                 >

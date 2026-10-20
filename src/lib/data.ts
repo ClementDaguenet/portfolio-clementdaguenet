@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import type {
   ProProject,
   ProProjectsData,
+  ProPricingData,
   ProSkillsData,
   ProTimelineData,
   TimelineItem,
@@ -35,7 +36,11 @@ export function getSkills(): string[] {
   return readJson<ProSkillsData>("src/data/proSkills.json").skills;
 }
 
-export type ProPageKey = "cv" | "contact" | "mentions-legales";
+export function getPricing(): ProPricingData {
+  return readJson<ProPricingData>("src/data/proPricing.json");
+}
+
+export type ProPageKey = "cv" | "tarifs" | "contact" | "mentions-legales";
 
 export type ProSiteSettings = {
   headshot: string;
