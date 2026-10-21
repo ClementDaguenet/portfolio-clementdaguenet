@@ -29,6 +29,7 @@ export function Footer({
           <p>
             © {year} · {t("rights")}
           </p>
+          <p className="text-xs">{t("siret")}</p>
           <p className="text-xs">{t("builtWith")}</p>
         </div>
         <div className="flex flex-wrap items-center gap-4 text-sm">

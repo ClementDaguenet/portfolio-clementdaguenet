@@ -91,6 +91,7 @@
   },
   "footer": {
     "rights": "Tous droits réservés.",
+    "siret": "SIRET 131 599 763 00011",
     "legal": "Mentions légales",
     "mirror": "Portfolio gaming · WoXayZ",
     "builtWith": "Next.js · TypeScript · Tailwind"
@@ -116,7 +117,7 @@
   "legal": {
     "title": "Mentions légales",
     "editorTitle": "Éditeur",
-    "editorBody": "Ce site est édité par Clément Daguenet, particulier.\nContact: contact@clement-daguenet.fr",
+    "editorBody": "Ce site est édité par Clément Daguenet, entrepreneur individuel.\n9 Avenue Félix Geneslay\n72100 Le Mans, France\nSIREN : 131 599 763\nSIRET : 131 599 763 00011\nTVA intracommunautaire : FR86131599763\nContact : contact@clement-daguenet.fr",
     "hostTitle": "Hébergeur",
     "hostBody": "OVH SAS - 2 rue Kellermann, 59100 Roubaix, France.\nSite: https://www.ovhcloud.com",
     "ipTitle": "Propriété intellectuelle",

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
@@ -39,8 +40,16 @@ export function Header({
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 md:px-6">
         <Link
           href="/"
-          className="font-[family-name:var(--font-display)] text-lg font-semibold tracking-tight text-[var(--color-primary)] md:text-xl"
+          className="flex shrink-0 items-center gap-2 whitespace-nowrap font-[family-name:var(--font-display)] text-base font-semibold tracking-tight text-[var(--color-primary)] md:gap-2.5 md:text-xl"
         >
+          <Image
+            src="/images/pro/logo_cd_square.webp"
+            alt=""
+            width={36}
+            height={36}
+            priority
+            className="h-7 w-7 rounded-md md:h-9 md:w-9"
+          />
           {t("brand")}
         </Link>
 
